@@ -67,7 +67,8 @@
   (interactive
    (progn (jq-docs-ensure 'sections)
           (list (cdr (assoc-string
-                      (completing-read "Search: " jq-docs--sections)
+                      (completing-read
+                       "Search: " jq-docs--sections nil t (thing-at-point 'symbol))
                       jq-docs--sections))
                 'href
                 'interactive)))
