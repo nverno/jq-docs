@@ -28,6 +28,7 @@ $(DOCS): $(ORG)
 	@emacs --batch -Q -l org --eval \
 		"(with-temp-buffer \
 			(insert-file-contents \"$^\") \
+			(org-mode) \
 			(org-table-map-tables #'org-table-align) \
 			(write-file \"$@\" nil))"
 
