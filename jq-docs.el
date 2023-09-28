@@ -30,6 +30,9 @@
 ;;
 ;;; Code:
 
+(eval-when-compile (require 'org))
+(declare-function org-narrow-to-subtree "org")
+
 (defvar jq-docs--dir
   (file-name-directory
    (cond (load-in-progress load-file-name)
