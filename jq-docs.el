@@ -31,7 +31,10 @@
 ;;; Code:
 
 (eval-when-compile (require 'org))
+
 (declare-function org-narrow-to-subtree "org")
+(autoload 'outline-show-subtree "outline")
+(autoload 'outline-show-all "outline")
 
 (defvar jq-docs--dir
   (file-name-directory
